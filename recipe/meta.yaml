@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/gems4/chemicalfun/get/v{{ version }}.tar.gz
-  sha256: 674fd6d02315e5b0a1766b45fa50455db4ccdafc13f8a1c01644cb8bfb73edc6
+  sha256: ad6cbd46bb75fe5811f4fcae7966d7717bf30f4f0f4749783e09a9f53780e6e6
 
 build:
   number: 0
