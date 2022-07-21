@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/gems4/chemicalfun/get/v{{ version }}.tar.gz
-  sha256: aa17b0e82154169ae709473d273c65ce7a83cbf7ffb5c334e5c56aade9b7c467
+  sha256: b2f88c3410c10c73ef94cc17a948eebf0d9575daee501e5e28126dc6f7dd5e8e
 
 build:
   number: 0
@@ -20,7 +20,7 @@ requirements:
     - make  # [unix]
   host:
     - pybind11
-    - eigen =3.3.7
+    - eigen =3.4.0
     - python
     - spdlog >=1.10.0
     - nlohmann_json >=3.7.0
