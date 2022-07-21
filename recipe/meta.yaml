@@ -20,7 +20,7 @@ requirements:
     - make  # [unix]
   host:
     - pybind11
-    - eigen
+    - eigen =3.3.7
     - python
     - spdlog >=1.10.0
     - nlohmann_json >=3.7.0
