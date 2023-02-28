@@ -1,11 +1,11 @@
-About chemicalfun
-=================
+About chemicalfun-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/chemicalfun-feedstock/blob/main/LICENSE.txt)
 
 Home: https://bitbucket.org/gems4/chemicalfun
 
 Package license: LGPL-3.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/chemicalfun-feedstock/blob/main/LICENSE.txt)
 
 Summary: Library for generating balanced chemical reactions and for parsing and calculating properties of chemical formulas.
 
