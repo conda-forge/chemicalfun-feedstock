@@ -1,4 +1,4 @@
-{% set version = "0.1.7" %}
+{% set version = "0.1.8" %}
 
 package:
   name: chemicalfun
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://bitbucket.org/gems4/chemicalfun/get/v{{ version }}.tar.gz
-  sha256: 1f25409cba68bdf3fda4e01ca8e2e50d8402b986236c0eb52845238602487710
+  sha256: a51341f0a89b0a43e3e50d43bb22d7aa79c86448f4c53869369a16f29afcc965
 
 build:
   number: 0
