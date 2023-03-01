@@ -20,6 +20,7 @@ requirements:
     - ninja  # [win]
     - make  # [unix]
   host:
+    - pip
     - pybind11
     - eigen >=3.4.0
     - python
