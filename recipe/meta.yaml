@@ -1,12 +1,12 @@
-{% set version = "0.1.8" %}
+{% set version = "0.1.9" %}
 
 package:
   name: chemicalfun
   version: {{ version }}
 
 source:
-  url: https://bitbucket.org/gems4/chemicalfun/get/v{{ version }}.tar.gz
-  sha256: c260f2b23a0bd75019eb35ced4db8ec6f88627f839fde64ad2b87ec629c272c2
+  url: https://github.com/thermohub/chemicalfun/archive/v{{ version }}.tar.gz
+  sha256: 3d5a7b22180a93b7fe566a10fa4cdaab47457193311c083aae4506079f6fe5c3
 
 build:
   number: 0
@@ -38,16 +38,17 @@ test:
     - chemicalfun
 
 about:
-  home: https://bitbucket.org/gems4/chemicalfun
+  home: https://github.com/thermohub/chemicalfun
   license: LGPL-3.0-or-later
   license_family: LGPL
   license_file: LICENSE
   summary: Library for generating balanced chemical reactions and for parsing and calculating properties of chemical formulas.
-  doc_url: https://bitbucket.org/gems4/chemicalfun
-  dev_url: https://bitbucket.org/gems4/chemicalfun
+  doc_url: https://github.com/thermohub/chemicalfun
+  dev_url: https://github.com/thermohub/chemicalfun
 
 extra:
   recipe-maintainers:
     - gdmiron
     - dimitrikulik
     - sdmytrievs
+    - allanleal
