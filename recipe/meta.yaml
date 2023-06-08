@@ -9,7 +9,7 @@ source:
   sha256: 3d5a7b22180a93b7fe566a10fa4cdaab47457193311c083aae4506079f6fe5c3
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -17,7 +17,10 @@ requirements:
     - {{ compiler('cxx') }}
     - cmake
     - ninja  # [win]
-    - make  # [unix]
+    - make   # [unix]
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - pybind11                               # [build_platform != target_platform]
   host:
     - pybind11
     - eigen >=3.4.0
