@@ -10,7 +10,6 @@ source:
 
 build:
   number: 2
-  skip: true  # [win and vc<14]
 
 requirements:
   build:
@@ -27,7 +26,8 @@ requirements:
     - eigen >=3.4.0
     - python
     - pip
-    - spdlog >=1.10.0
+    - setuptools
+    - spdlog
     - nlohmann_json >=3.7.0
   run:
     - python
