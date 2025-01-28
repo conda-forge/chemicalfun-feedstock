@@ -1,4 +1,4 @@
-{% set version = "0.1.10" %}
+{% set version = "0.1.11" %}
 
 package:
   name: chemicalfun
@@ -6,16 +6,17 @@ package:
 
 source:
   url: https://github.com/thermohub/chemicalfun/archive/v{{ version }}.tar.gz
-  sha256: 8948889cf3cce3f628eed04de9aa74ae8a0817ffa66d99ecb3867c644587e14f
+  sha256: 1a1c83038f03e5629f16a1787307022e190774fa56823a41c83e02912d23e897
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - {{ stdlib("c") }}
+    - {{ compiler('c') }}
+    - {{ stdlib('c') }}
     - cmake
     - ninja  # [win]
     - make   # [unix]
@@ -27,7 +28,8 @@ requirements:
     - eigen >=3.4.0
     - python
     - pip
-    - spdlog >=1.10.0
+    - setuptools
+    - spdlog
     - nlohmann_json >=3.7.0
   run:
     - python
