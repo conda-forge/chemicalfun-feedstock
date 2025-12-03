@@ -1,4 +1,4 @@
-{% set version = "0.1.12" %}
+{% set version = "0.1.13" %}
 
 package:
   name: chemicalfun
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/thermohub/chemicalfun/archive/v{{ version }}.tar.gz
-  sha256: 0442abd3205d30d6254f54b2c7c5bd73451ab4ab1946262255e784105e9a2cf7
+  sha256: fe009d0b9ed491f57fe48048fd677e4746c32422c466bd1b61013782a7e58654
 
 build:
-  number: 7
+  number: 0
   skip: true  # [win and vc<14]
 
 requirements:
