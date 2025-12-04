@@ -6,6 +6,9 @@ cmake -G Ninja ^
       -DCMAKE_BUILD_TYPE=Release ^
       -DCMAKE_INSTALL_PREFIX:PATH="%LIBRARY_PREFIX%" ^
       -DCMAKE_INCLUDE_PATH:PATH="%LIBRARY_INC%" ^
+      -DPython_EXECUTABLE="%PYTHON%" ^
+      -DPython_INCLUDE_DIR="%PYTHON_INCLUDE%" ^
+      -DPython_LIBRARY="%PYTHON_LIB%" ^
       -DCHEMICALFUN_BUILD_EXAMPLES=OFF ^
       ..
 
