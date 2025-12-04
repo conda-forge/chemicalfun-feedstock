@@ -17,5 +17,5 @@ cmake -DPYTHON_EXECUTABLE:FILEPATH="$PYTHON" \
       -DCMAKE_INSTALL_LIBDIR=$PREFIX/lib \
       ..
 # Build step
-make -j${CPU_COUNT}
+make
 make install
