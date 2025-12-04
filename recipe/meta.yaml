@@ -19,16 +19,14 @@ requirements:
     - {{ stdlib('c') }}
     - cmake
     - ninja  # [win]
-    - make
-    - python
-    - pip
-    - setuptools
-    - wheel
+    - make   # [unix]
+    - python                                 # [build_platform != target_platform]
+    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
+    - pybind11                               # [build_platform != target_platform]
   host:
     - python
     - pip
     - setuptools
-    - wheel
     - pybind11
     - eigen >=3.4.0
     - spdlog
@@ -37,7 +35,6 @@ requirements:
     - python
     - pip
     - setuptools
-    - wheel
 
 test:
   commands:
@@ -47,6 +44,9 @@ test:
     - if exist %LIBRARY_PREFIX%\include\ChemicalFun\FormulaParser.h (exit 0) else (exit 1)  # [win]
   imports:
     - chemicalfun
+  requires:
+    - pip
+    - python
 
 about:
   home: https://github.com/thermohub/chemicalfun
