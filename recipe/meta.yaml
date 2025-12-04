@@ -9,7 +9,7 @@ source:
   sha256: fe009d0b9ed491f57fe48048fd677e4746c32422c466bd1b61013782a7e58654
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -19,16 +19,17 @@ requirements:
     - {{ stdlib('c') }}
     - cmake
     - ninja  # [win]
-    - make   # [unix]
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
+    - make
+    - pip
+    - setuptools
+    - wheel
   host:
-    - pybind11
-    - eigen >=3.4.0
     - python
     - pip
     - setuptools
+    - wheel
+    - pybind11
+    - eigen >=3.4.0
     - spdlog
     - nlohmann_json >=3.7.0
   run:
