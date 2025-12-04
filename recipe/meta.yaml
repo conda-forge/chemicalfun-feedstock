@@ -20,15 +20,15 @@ requirements:
     - cmake
     - ninja  # [win]
     - make   # [unix]
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
+    - pip
+    - setuptools
+    - wheel
   host:
+    - setuptools
+    - wheel
     - pybind11
     - eigen >=3.4.0
     - python
-    - pip
-    - setuptools
     - spdlog
     - nlohmann_json >=3.7.0
   run:
