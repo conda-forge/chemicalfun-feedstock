@@ -35,6 +35,9 @@ requirements:
     - nlohmann_json >=3.7.0
   run:
     - python
+    - pip
+    - setuptools
+    - wheel
 
 test:
   commands:

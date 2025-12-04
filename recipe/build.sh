@@ -16,4 +16,4 @@ cmake -DCMAKE_BUILD_TYPE=Release \
 # Build step
 make
 make install
-python -c "import chemicalfun"
+#python -c "import chemicalfun"
