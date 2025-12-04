@@ -24,17 +24,15 @@ requirements:
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - pybind11                               # [build_platform != target_platform]
   host:
+    - pybind11
+    - eigen >=3.4.0
     - python
     - pip
     - setuptools
-    - pybind11
-    - eigen >=3.4.0
     - spdlog
     - nlohmann_json >=3.7.0
   run:
     - python
-    - pip
-    - setuptools
 
 test:
   commands:
@@ -44,9 +42,6 @@ test:
     - if exist %LIBRARY_PREFIX%\include\ChemicalFun\FormulaParser.h (exit 0) else (exit 1)  # [win]
   imports:
     - chemicalfun
-  requires:
-    - pip
-    - python
 
 about:
   home: https://github.com/thermohub/chemicalfun

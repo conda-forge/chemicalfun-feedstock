@@ -14,6 +14,6 @@ cmake -DCMAKE_BUILD_TYPE=Release \
       -DCHEMICALFUN_BUILD_TESTS=ON \
       ..
 # Build step
-make
+make  -j${CPU_COUNT}
 make install
 #python -c "import chemicalfun"
