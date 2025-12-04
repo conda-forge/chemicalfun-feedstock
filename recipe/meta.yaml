@@ -37,6 +37,7 @@ requirements:
 test:
   commands:
     - conda list
+    - which python # [unix]
     - test -d ${PREFIX}/include/ChemicalFun  # [unix]
     - test -f ${PREFIX}/include/ChemicalFun/FormulaParser.h  # [unix]
     - if exist %LIBRARY_PREFIX%\include\ChemicalFun\FormulaParser.h (exit 0) else (exit 1)  # [win]

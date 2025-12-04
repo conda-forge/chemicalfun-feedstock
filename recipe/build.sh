@@ -20,3 +20,4 @@ cmake -DPYTHON_EXECUTABLE:FILEPATH="$PYTHON" \
 make -j${CPU_COUNT}
 make install
 #python -c "import chemicalfun"
+which python
