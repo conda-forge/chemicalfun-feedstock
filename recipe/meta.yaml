@@ -20,17 +20,17 @@ requirements:
     - cmake
     - ninja  # [win]
     - make   # [unix]
-    - pip
-    - setuptools
-    - wheel
+
   host:
+    - python
+    - pip
     - setuptools
     - wheel
     - pybind11
     - eigen >=3.4.0
-    - python
     - spdlog
     - nlohmann_json >=3.7.0
+
   run:
     - python
 
