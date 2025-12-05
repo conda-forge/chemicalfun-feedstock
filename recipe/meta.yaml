@@ -1,4 +1,4 @@
-{% set version = "0.1.12" %}
+{% set version = "0.1.13" %}
 
 package:
   name: chemicalfun
@@ -6,10 +6,10 @@ package:
 
 source:
   url: https://github.com/thermohub/chemicalfun/archive/v{{ version }}.tar.gz
-  sha256: 0442abd3205d30d6254f54b2c7c5bd73451ab4ab1946262255e784105e9a2cf7
+  sha256: fe009d0b9ed491f57fe48048fd677e4746c32422c466bd1b61013782a7e58654
 
 build:
-  number: 7
+  number: 1
   skip: true  # [win and vc<14]
 
 requirements:
@@ -20,23 +20,28 @@ requirements:
     - cmake
     - ninja  # [win]
     - make   # [unix]
-    - python                                 # [build_platform != target_platform]
-    - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - pybind11                               # [build_platform != target_platform]
+    - python  # [win or osx]
+    - pip  # [win or osx]
+    - setuptools  # [win or osx]
+    - wheel  # [win or osx]
+
   host:
-    - pybind11
-    - eigen >=3.4.0
     - python
     - pip
     - setuptools
+    - wheel
+    - pybind11
+    - eigen >=3.4.0
     - spdlog
     - nlohmann_json >=3.7.0
+
   run:
     - python
 
 test:
   commands:
     - conda list
+    - which python  # [unix]
     - test -d ${PREFIX}/include/ChemicalFun  # [unix]
     - test -f ${PREFIX}/include/ChemicalFun/FormulaParser.h  # [unix]
     - if exist %LIBRARY_PREFIX%\include\ChemicalFun\FormulaParser.h (exit 0) else (exit 1)  # [win]

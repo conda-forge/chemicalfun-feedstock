@@ -11,6 +11,7 @@ cd build
 
 # Configure step
 cmake -DPYTHON_EXECUTABLE:FILEPATH="$PYTHON" \
+      -DCHEMICALFUN_PYTHON_INSTALL_PREFIX="$PREFIX" \
       -DCMAKE_BUILD_TYPE=Release \
       -DCHEMICALFUN_BUILD_TESTS=ON \
       -DCMAKE_INSTALL_PREFIX="$PREFIX" \
@@ -19,3 +20,5 @@ cmake -DPYTHON_EXECUTABLE:FILEPATH="$PYTHON" \
 # Build step
 make -j${CPU_COUNT}
 make install
+#python -c "import chemicalfun"
+which python
