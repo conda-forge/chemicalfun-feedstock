@@ -20,6 +20,9 @@ requirements:
     - cmake
     - ninja  # [win]
     - make   # [unix]
+    - pip  # [win and osx]
+    - setuptools  # [win and osx]
+    - wheel  # [win and osx]
 
   host:
     - python
