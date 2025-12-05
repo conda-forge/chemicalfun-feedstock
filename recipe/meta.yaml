@@ -20,6 +20,7 @@ requirements:
     - cmake
     - ninja  # [win]
     - make   # [unix]
+    - python  # [win or osx]
     - pip  # [win or osx]
     - setuptools  # [win or osx]
     - wheel  # [win or osx]
